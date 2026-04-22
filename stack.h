@@ -3,7 +3,6 @@
 
 #include <stdexcept>
 
-#define MAX 100
 
 struct Stack {
     long long data[MAX];

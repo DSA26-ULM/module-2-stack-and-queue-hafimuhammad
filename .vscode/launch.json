@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run prob1",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\prob1.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+            "preLaunchTask": "C/C++: Build prob1.cpp"
+        },
+        {
+            "name": "Run prob2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\prob2.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+            "preLaunchTask": "C/C++: Build prob2.cpp"
+        }
+    ]
+}
