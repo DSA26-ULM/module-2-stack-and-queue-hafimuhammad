@@ -1,6 +1,8 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+#include <stdexcept>
+
 #define MAX 100
 
 struct Queue {
