@@ -38,5 +38,7 @@ int front(const Queue* q) {
 
 int back(const Queue* q) {
     if (isEmpty(q)) {
+        throw std::underflow_error("Queue kosong, tidak bisa melakukan back!");
     }
     return *(q->rear);
+}

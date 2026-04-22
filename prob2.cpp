@@ -13,6 +13,7 @@ int main() {
         cin >> arr[i];
     }
 
+    // Hitung sum window pertama
     int jumlah = 0;
     for (int i = 0; i < k; i++) {
         jumlah += arr[i];
@@ -20,9 +21,13 @@ int main() {
 
     cout << jumlah;
 
+    // Geser window satu per satu
     for (int i = k; i < n; i++) {
+        jumlah -= arr[i - k]; // hapus elemen paling kiri
+        jumlah += arr[i];     // tambah elemen baru kanan
         cout << " " << jumlah;
     }
 
     cout << endl;
     return 0;
+}
