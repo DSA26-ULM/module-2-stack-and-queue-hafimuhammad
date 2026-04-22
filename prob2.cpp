@@ -1,6 +1,5 @@
 #include "queue.h"
 #include <iostream>
-#include "queue.h"
 
 using namespace std;
 
@@ -44,4 +43,3 @@ int main() {
 
     cout << endl;
 
-    return 0;
