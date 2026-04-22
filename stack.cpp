@@ -2,7 +2,6 @@
 
 
 
-    return s->top >= s->data + MAX - 1;
 
 }
 
