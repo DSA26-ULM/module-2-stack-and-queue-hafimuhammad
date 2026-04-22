@@ -29,9 +29,11 @@ int main() {
             if (token == "+") result = a + b;
             else if (token == "-") result = a - b;
             else if (token == "*") result = a * b;
+            else result = (b != 0) ? a / b : 0;
 
             push(&st, result);
         } else {
+            push(&st, stoll(token));
         }
     }
 

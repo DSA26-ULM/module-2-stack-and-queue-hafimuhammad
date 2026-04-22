@@ -3,6 +3,7 @@
 
 #include <stdexcept>
 
+#define MAX 100005
 
 struct Stack {
     long long data[MAX];
