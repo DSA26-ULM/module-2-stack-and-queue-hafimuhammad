@@ -15,7 +15,6 @@ bool isFull(const Stack* s) {
 
 void push(Stack* s, int value) {
     if (isFull(s)) {
-        throw std::overflow_error("Stack penuh, tidak bisa push!");
     }
     s->top++;
     *(s->top) = value;
@@ -23,14 +22,12 @@ void push(Stack* s, int value) {
 
 void pop(Stack* s) {
     if (isEmpty(s)) {
-        throw std::underflow_error("Stack kosong, tidak bisa pop!");
     }
     s->top--;
 }
 
 int peek(const Stack* s) {
     if (isEmpty(s)) {
-        throw std::underflow_error("Stack kosong, tidak bisa peek!");
     }
     return *(s->top);
 }
