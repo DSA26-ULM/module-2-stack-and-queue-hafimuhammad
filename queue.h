@@ -7,8 +7,9 @@
 
 struct Queue {
     int data[MAX];
-    int* front;
-    int* rear;
+    int front_idx;
+    int rear_idx;
+    int count;
 };
 
 void init(Queue* q);
