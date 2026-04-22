@@ -21,19 +21,25 @@ int main() {
         if (token == "+" || token == "-" || token == "*" || token == "/") {
             
             int b = peek(&st); 
+            // Ambil operand kedua lalu pertama (PENTING: urutan b lalu a)
+            long long b = peek(&st); 
             pop(&st);
             int a = peek(&st); 
+            long long a = peek(&st); 
             pop(&st);
 
             int result;
+            long long result;
             if (token == "+") result = a + b;
             else if (token == "-") result = a - b;
             else if (token == "*") result = a * b;
             else result = a / b;
+            else result = (b != 0) ? a / b : 0; // Hindari division by zero
 
             push(&st, result);
         } else {
             push(&st, stoi(token));
+            push(&st, stoll(token)); // Menggunakan stoll untuk angka besar
         }
     }
 
