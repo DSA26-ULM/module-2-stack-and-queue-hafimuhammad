@@ -10,5 +10,11 @@ struct Stack {
     int top = -1;
 };
 
+void init(Stack* s);
+bool isEmpty(const Stack* s);
+bool isFull(const Stack* s);
+void push(Stack* s, int value);
+void pop(Stack* s);
+int peek(const Stack* s);
 
 #endif
