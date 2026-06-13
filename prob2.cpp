@@ -2,6 +2,7 @@
 #include "queue.h"
 
 using namespace std;
+
 int main() {
 int n, k;
 if (!(cin >> n >> k)) return 0;
