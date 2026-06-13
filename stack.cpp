@@ -1,20 +1,42 @@
 #include "stack.h"
-
-void init(Stack* s) { s->top = -1; }
-bool isEmpty(const Stack* s) { return s->top == -1; }
-bool isFull(const Stack* s) { return s->top == MAX - 1; }
-
-void push(Stack* s, long long value) {
-    if (isFull(s)) throw std::overflow_error("Stack penuh!");
-    s->data[++s->top] = value;
+#include <iostream>
+#include <string>
+using namespace std;
+void init(Stack* s){
+s->top = nullptr;
 }
 
-void pop(Stack* s) {
-    if (isEmpty(s)) throw std::underflow_error("Stack kosong!");
-    s->top--;
+bool isEmpty(const Stack* s){
+return s->top == nullptr;
 }
 
-long long peek(const Stack* s) {
-    if (isEmpty(s)) throw std::underflow_error("Stack kosong!");
-    return s->data[s->top];
+bool isFull(const Stack* s){
+return s->top == &(s->data[MAX - 1]);
+}
+
+void push(Stack* s, int value){
+if (isFull(s)) throw "Stack penuh";
+
+if (isEmpty(s)) {
+s->top = s->data;
+} else {
+s->top++;
+}
+*s->top = value;
+}
+
+int pop(Stack* s){
+if (isEmpty(s)) throw "Stack kosong";
+int value = *s->top;
+if (s->top == s->data) {
+s->top = nullptr;
+} else {
+s->top--;
+}
+return value;
+}
+
+int peek(const Stack* s){
+if (isEmpty(s)) throw "Stack kosong";
+return *s->top;
 }
