@@ -1,20 +1,20 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include <stdexcept>
-
-#define MAX 100005
+#define MAX 100
+#include <string>
 
 struct Stack {
-    long long data[MAX];
-    int top;
+int data[MAX];
+int* top;
 };
 
 void init(Stack* s);
 bool isEmpty(const Stack* s);
 bool isFull(const Stack* s);
-void push(Stack* s, long long value);
-void pop(Stack* s);
-long long peek(const Stack* s);
+void push(Stack* s, int value);
+int pop(Stack* s);
+int peek(const Stack* s);
+int HasilOperasi(Stack* s, int n, std::string input[]);
 
 #endif
